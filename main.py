@@ -20,6 +20,10 @@ def merge_pdfs(input_directory, input_files, output_file):
 
     # Writing the merged file
     with open(f"{input_directory}\\{output_file}", 'wb') as out_file:
+        merger.write(out_file)
+    
+    # Close the merger to free resources
+    merger.close()
 
 
 if __name__ == "__main__":
